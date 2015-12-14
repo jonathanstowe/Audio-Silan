@@ -26,6 +26,11 @@ minimum length of silence required before it is considered the end of the
 audio.)  For certain material these values may need adjustment in order to
 provide accurate output.
 
+Because the detection may take some time for larger files, this takes
+place asynchronously: the method ```find-boundaries``` returns a
+[Promise](http://doc.perl6.org/type/Promise) which will be kept with
+the result of the detection (or broken if the detection failed.)
+
 
 ## Installation
 
@@ -73,13 +78,12 @@ being used,  I do know that version 0.3.2 of silan (which is frequently
 distributed with OS distributions,) may mis-detect for longer MP3 files
 (for example a 2 hour MP3 file may be detected as "ending" around the hour
 mark,) if this causes a problem to you then you should try upgrading the
-silan.
+silan.  [This issue](https://github.com/x42/silan/issues/3) may also
+suggest that for certain types of file, the underlying libraries may also
+have an impact.
 
 ## Licence
 
 Please see the LICENCE file in the distribution
 
 (C) Jonathan Stowe 2015
-
-
-
