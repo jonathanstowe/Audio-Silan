@@ -37,6 +37,7 @@ is $ret.sample-rate, 44100, "correct sample rate";
 is $ret.duration, 2, "correct duration";
 
 
+throws-like { await $obj.find-boundaries("jkssksks.wav") },X::NoFile, message => "File 'jkssksks.wav' does not exist", "test exception" ;
 
 
 done-testing;
