@@ -2,6 +2,8 @@
 
 Audio silence detection using silan (https://github.com/x42/silan)
 
+[![Build Status](https://travis-ci.org/jonathanstowe/Audio-Silan.svg?branch=master)](https://travis-ci.org/jonathanstowe/Audio-Silan)
+
 ## Synopsis
 
 ```
