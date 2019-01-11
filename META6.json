@@ -6,7 +6,7 @@
     "source": "git://github.com/jonathanstowe/Audio-Silan.git",
     "bugtracker": "https://github.com/jonathanstowe/Audio-Silan/issues"
   },
-  "perl": "6.c",
+  "perl": "6.",
   "resources": [
   ],
   "build-depends": [
@@ -30,7 +30,8 @@
   "provides": {
     "Audio::Silan": "lib/Audio/Silan.pm"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "api": "1.0",
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk>"
   ],
