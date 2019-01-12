@@ -85,7 +85,7 @@ audio is detected to end.
 
 =end pod
 
-class Audio::Silan:ver<0.0.5>:auth<github:jonathanstowe>:api<1.0> {
+class Audio::Silan:ver<0.0.6>:auth<github:jonathanstowe>:api<1.0> {
     use File::Which;
     use JSON::Fast;
 

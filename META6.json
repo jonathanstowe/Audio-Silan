@@ -24,13 +24,12 @@
   ],
   "license": "Artistic-2.0",
   "test-depends": [
-    "Test",
-    "Test::META"
+    "Test"
   ],
   "provides": {
     "Audio::Silan": "lib/Audio/Silan.pm"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "api": "1.0",
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk>"
