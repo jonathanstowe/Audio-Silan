@@ -85,15 +85,15 @@ audio is detected to end.
 
 =end pod
 
-class Audio::Silan:ver<0.0.6>:auth<github:jonathanstowe>:api<1.0> {
+class Audio::Silan:ver<0.0.7>:auth<github:jonathanstowe>:api<1.0> {
     use File::Which;
     use JSON::Fast;
 
-    class X::NoSilan is Exception {
+    class X::Silan::NoSilan is Exception {
         has Str $.message = "No silan executable found";
     }
 
-    class X::NoFile is Exception {
+    class X::Silan::NoFile is Exception {
         has Str $.filename is required;
         method message() {
             return "File '{ $.filename }' does not exist";
@@ -115,7 +115,7 @@ class Audio::Silan:ver<0.0.6>:auth<github:jonathanstowe>:api<1.0> {
         if not $!silan-path.defined {
             my $sp = which('silan');
             if not $sp.defined {
-                X::NoSilan.new.throw;
+                X::Silan::NoSilan.new.throw;
             }
             else {
                 $!silan-path = $sp;
@@ -123,7 +123,7 @@ class Audio::Silan:ver<0.0.6>:auth<github:jonathanstowe>:api<1.0> {
         }
 
         if not $!silan-path.IO.x {
-            X::NoSilan.new.throw;
+            X::Silan::NoSilan.new.throw;
         }
 
         $!silan-path;
@@ -132,7 +132,7 @@ class Audio::Silan:ver<0.0.6>:auth<github:jonathanstowe>:api<1.0> {
     method find-boundaries(Str $file) returns Promise {
         start {
             if not $file.IO.r {
-                X::NoFile.new(filename => $file).throw;
+                X::Silan::NoFile.new(filename => $file).throw;
             }
             else {
                 my @args = self.build-args($file);

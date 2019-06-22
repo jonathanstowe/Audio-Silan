@@ -38,7 +38,7 @@ if try $obj.silan-path {
     is $ret.duration, 2, "correct duration";
 
 
-    throws-like { await $obj.find-boundaries("jkssksks.wav") },X::NoFile, message => "File 'jkssksks.wav' does not exist", "test exception" ;
+    throws-like { await $obj.find-boundaries("jkssksks.wav") },X::Silan::NoFile, message => "File 'jkssksks.wav' does not exist", "test exception" ;
 }
 else {
     skip "no silan executable found", 15;
