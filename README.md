@@ -2,11 +2,11 @@
 
 Audio silence detection using silan (https://github.com/x42/silan)
 
-[![Build Status](https://travis-ci.org/jonathanstowe/Audio-Silan.svg?branch=master)](https://travis-ci.org/jonathanstowe/Audio-Silan)
+![Build Status](https://github.com/jonathanstowe/Audio-Silan/workflows/CI/badge.svg)
 
 ## Synopsis
 
-```perl6
+```raku
 
 use Audio::Silan;
 
@@ -31,7 +31,7 @@ provide accurate output.
 
 Because the detection may take some time for larger files, this takes
 place asynchronously: the method ```find-boundaries``` returns a
-[Promise](http://doc.perl6.org/type/Promise) which will be kept with
+[Promise](http://doc.raku.org/type/Promise) which will be kept with
 the result of the detection (or broken if the detection failed.)
 
 
@@ -43,8 +43,7 @@ on Unix-like systems and you can use the appropriate package manager to
 install it.  If it is not available as a package then it should be possible
 to install it from source.
 
-Assuming you have a working Rakudo perl6 installation you should be able to
-install this with *zef* :
+Assuming you have a working Rakudo installation you should be able to install this with *zef* :
 
     # From the source directory
    
@@ -77,6 +76,6 @@ have an impact.
 
 This is free software.
 
-Please see the LICENCE file in the distribution
+Please see the [LICENCE](LICENCE) file in the distribution
 
-© Jonathan Stowe 2015, 2016, 2017, 2019
+© Jonathan Stowe 2015 - 2021
