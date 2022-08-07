@@ -1,3 +1,5 @@
+v0.0.9	Sun  7 Aug 09:47:40 BST 2022
+	* Upload to zef repository
 v0.0.8		Mon 29 Mar 07:39:33 BST 2021
 	* Springclean and rename
 	* Move to GH actions
@@ -14,3 +16,4 @@ v0.0.3		Sat Mar 12 10:52:18 2016 +0000
 v0.0.2		Thu Dec 24 23:49:37 2015 +0000 
 	* Fix dependencies
 	* Add test for exception
+
