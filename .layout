@@ -47,7 +47,7 @@
           "children": [
             {
               "type": "file",
-              "name": "Silan.pm"
+              "name": "Silan.rakumod"
             }
           ],
           "purpose": null

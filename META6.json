@@ -3,7 +3,7 @@
   "test-depends": [
     "Test"
   ],
-  "version": "0.0.9",
+  "version": "0.0.10",
   "meta-version": "1",
   "tags": [
     "audio",
@@ -11,7 +11,7 @@
     "silence"
   ],
   "provides": {
-    "Audio::Silan": "lib/Audio/Silan.pm"
+    "Audio::Silan": "lib/Audio/Silan.rakumod"
   },
   "support": {
     "bugtracker": "https://github.com/jonathanstowe/Audio-Silan/issues",
